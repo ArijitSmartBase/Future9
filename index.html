@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Doctor - Instant Device Troubleshooting</title>
+    <meta name="description" content="Get instant, safe troubleshooting for PC and mobile devices. Step-by-step instructions to fix common tech problems.">
+    
+    <!-- TailwindCSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Structured data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "How to speed up my PC?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Several steps can help speed up your PC: 1) Disable unnecessary startup programs, 2) Clean up disk space, 3) Update drivers, 4) Run antivirus scans."
+        }
+      }]
+    }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-blue-600 text-white shadow-lg">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-stethoscope text-2xl"></i>
+                <h1 class="text-2xl font-bold">Tech Doctor(AJFI)</h1>
+            </div>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="#" class="hover:text-blue-200">Home</a></li>
+                    <li><a href="#" class="hover:text-blue-200">Solutions</a></li>
+                    <li><a href="#" class="hover:text-blue-200">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- Hero Section -->
+        <section class="text-center mb-12">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">Instant Tech Support for Your Devices</h2>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
+                Get safe, step-by-step troubleshooting guides for PC and mobile issues. 
+                No technical expertise required.
+            </p>
+            
+            <!-- Search Form -->
+            <div class="max-w-2xl mx-auto bg-white rounded-lg shadow-md p-6">
+                <form id="tech-search-form" class="space-y-4">
+                    <div class="flex">
+                        <input 
+                            type="text" 
+                            id="search-query" 
+                            placeholder="Describe your tech issue..." 
+                            class="flex-grow px-4 py-3 border border-gray-300 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            required
+                        >
+                        <button 
+                            type="submit" 
+                            class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-r-lg font-semibold transition duration-300"
+                        >
+                            <i class="fas fa-search mr-2"></i>Diagnose
+                        </button>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-left text-gray-700 mb-2">Device Type</label>
+                            <select id="device-type" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                <option value="">Select device</option>
+                                <option value="pc">PC/Laptop</option>
+                                <option value="android">Android Phone/Tablet</option>
+                                <option value="ios">iPhone/iPad</option>
+                                <option value="other">Other Device</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-left text-gray-700 mb-2">Operating System</label>
+                            <select id="os" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                <option value="">Select OS</option>
+                                <option value="windows">Windows</option>
+                                <option value="mac">MacOS</option>
+                                <option value="linux">Linux</option>
+                                <option value="android">Android</option>
+                                <option value="ios">iOS</option>
+                            </select>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Example Queries -->
+        <section class="mb-12">
+            <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center">Common Issues We Can Help With</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <div class="text-blue-600 text-3xl mb-4">
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold mb-2">Slow Computer</h4>
+                    <p class="text-gray-600">Fix performance issues with simple steps that won't risk your data.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <div class="text-blue-600 text-3xl mb-4">
+                        <i class="fas fa-battery-half"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold mb-2">Battery Drain</h4>
+                    <p class="text-gray-600">Extend your device's battery life with proven techniques.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <div class="text-blue-600 text-3xl mb-4">
+                        <i class="fas fa-wifi"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold mb-2">WiFi Connection</h4>
+                    <p class="text-gray-600">Troubleshoot internet connectivity problems on any device.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works -->
+        <section class="bg-blue-50 rounded-lg p-8 mb-12">
+            <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center">How Tech Doctor Works</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="text-center">
+                    <div class="bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="font-bold">1</span>
+                    </div>
+                    <h4 class="text-xl font-semibold mb-2">Describe Your Issue</h4>
+                    <p class="text-gray-600">Tell us what's wrong with your device in plain English.</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="font-bold">2</span>
+                    </div>
+                    <h4 class="text-xl font-semibold mb-2">Get Instant Diagnosis</h4>
+                    <p class="text-gray-600">Our system analyzes your issue and provides step-by-step solutions.</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="font-bold">3</span>
+                    </div>
+                    <h4 class="text-xl font-semibold mb-2">Fix Your Device</h4>
+                    <p class="text-gray-600">Follow our easy instructions to resolve your tech problem safely.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Results Section (Hidden by default) -->
+    <section id="results-section" class="container mx-auto px-4 py-8 hidden">
+        <div class="bg-white rounded-lg shadow-md p-6">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="text-2xl font-bold text-gray-800">Solution Found</h3>
+                <button id="new-search-btn" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg">
+                    New Search
+                </button>
+            </div>
+            <div id="solution-content">
+                <!-- Solution will be dynamically inserted here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Tech Doctor</h4>
+                    <p class="text-gray-400">
+                        Providing safe, reliable tech support for consumers since 2023.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Resources</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white">Safety Guidelines</a></li>
+                        <li><a href="#" class="hover:text-white">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-white">Terms of Service</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-400">
+                <p>&copy; 2023 Tech Doctor. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for form handling -->
+    <script>
+        document.getElementById('tech-search-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const query = document.getElementById('search-query').value;
+            const deviceType = document.getElementById('device-type').value;
+            const os = document.getElementById('os').value;
+            
+            if (!query) {
+                alert('Please describe your tech issue');
+                return;
+            }
+            
+            // In a real implementation, this would call your API endpoint
+            // For now, we'll simulate a response
+            simulateAPICall(query, deviceType, os);
+        });
+        
+        document.getElementById('new-search-btn').addEventListener('click', function() {
+            document.getElementById('results-section').classList.add('hidden');
+            document.querySelector('main').classList.remove('hidden');
+        });
+        
+        function simulateAPICall(query, deviceType, os) {
+            // Show loading state
+            const resultsSection = document.getElementById('results-section');
+            const solutionContent = document.getElementById('solution-content');
+            
+            solutionContent.innerHTML = `
+                <div class="flex justify-center my-8">
+                    <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
+                </div>
+                <p class="text-center text-gray-600">Analyzing your issue...</p>
+            `;
+            
+            resultsSection.classList.remove('hidden');
+            document.querySelector('main').classList.add('hidden');
+            
+            // Simulate API delay
+            setTimeout(() => {
+                displaySolution(query, deviceType, os);
+            }, 1500);
+        }
+        
+        function displaySolution(query, deviceType, os) {
+            const solutionContent = document.getElementById('solution-content');
+            
+            // This would normally come from your API
+            const solution = {
+                title: query,
+                source: "curated",
+                confidence: 0.92,
+                steps: [
+                    {
+                        step: 1,
+                        action: "Restart your device",
+                        expected: "Clear temporary issues that might be causing problems",
+                        est_time: "1m",
+                        difficulty: "easy"
+                    },
+                    {
+                        step: 2,
+                        action: "Check for system updates",
+                        expected: "Install the latest software fixes and improvements",
+                        est_time: "10m",
+                        difficulty: "easy"
+                    },
+                    {
+                        step: 3,
+                        action: "Clear cache and temporary files",
+                        expected: "Free up storage space and remove corrupted temporary data",
+                        est_time: "5m",
+                        difficulty: "easy"
+                    },
+                    {
+                        step: 4,
+                        action: "Run built-in diagnostics",
+                        expected: "Identify hardware or software issues automatically",
+                        est_time: "15m",
+                        difficulty: "intermediate",
+                        warning: "Data-loss risk: BACKUP before proceeding."
+                    }
+                ]
+            };
+            
+            let stepsHTML = '';
+            solution.steps.forEach(step => {
+                stepsHTML += `
+                <div class="border-l-4 border-blue-500 pl-4 py-2 mb-4">
+                    <div class="flex items-start">
+                        <span class="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center mr-3 flex-shrink-0">
+                            ${step.step}
+                        </span>
+                        <div class="flex-grow">
+                            <h4 class="font-bold text-lg">${step.action}</h4>
+                            <p class="text-gray-600">${step.expected}</p>
+                            <div class="flex flex-wrap gap-2 mt-2">
+                                <span class="bg-gray-100 text-gray-800 px-2 py-1 rounded text-sm">
+                                    <i class="far fa-clock"></i> ${step.est_time}
+                                </span>
+                                <span class="bg-gray-100 text-gray-800 px-2 py-1 rounded text-sm">
+                                    <i class="fas fa-signal"></i> ${step.difficulty}
+                                </span>
+                                ${step.warning ? `<span class="bg-red-100 text-red-800 px-2 py-1 rounded text-sm">
+                                    <i class="fas fa-exclamation-triangle"></i> ${step.warning}
+                                </span>` : ''}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                `;
+            });
+            
+            solutionContent.innerHTML = `
+                <div class="mb-6">
+                    <h3 class="text-xl font-bold mb-2">${solution.title}</h3>
+                    <div class="flex items-center text-sm text-gray-600">
+                        <span class="bg-green-100 text-green-800 px-2 py-1 rounded mr-2">
+                            ${solution.source === 'curated' ? 'Verified Solution' : 'AI Generated'}
+                        </span>
+                        <span>Confidence: ${(solution.confidence * 100).toFixed(0)}%</span>
+                    </div>
+                </div>
+                <div class="mb-6">
+                    <h4 class="text-lg font-bold mb-4">Step-by-Step Instructions</h4>
+                    ${stepsHTML}
+                </div>
+                <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4">
+                    <div class="flex">
+                        <div class="flex-shrink-0">
+                            <i class="fas fa-exclamation-circle text-yellow-400"></i>
+                        </div>
+                        <div class="ml-3">
+                            <h3 class="text-sm font-medium text-yellow-800">Safety Reminder</h3>
+                            <div class="mt-2 text-sm text-yellow-700">
+                                <p>Always backup important data before attempting repairs. If you're unsure about any step, consult a professional technician.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-6 flex justify-between">
+                    <button class="bg-gray-200 hover:bg-gray-300 text-gray-800 px-4 py-2 rounded-lg">
+                        <i class="fas fa-thumbs-down mr-2"></i>Not Helpful
+                    </button>
+                    <button class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg">
+                        <i class="fas fa-thumbs-up mr-2"></i>Helpful
+                    </button>
+                </div>
+            `;
+        }
+    </script>
+</body>
+</html>
